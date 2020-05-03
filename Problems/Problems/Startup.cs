@@ -29,6 +29,14 @@ namespace Problems
             watch.Stop();
             Console.WriteLine($"Number of Jewels in Stones : {numJewelsInStones} in time : {watch.ElapsedMilliseconds}");
             #endregion
+
+            #region Day-3
+            Day_3_RansomNote day_3 = new Day_3_RansomNote();
+            watch.Start();
+            bool status = day_3.CanConstruct("aalkjzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzp","aabowureoijlkcvlcvugzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+            watch.Stop();
+            Console.WriteLine($"Ransom String can be constructed from the magazine : {status} and time taken: {watch.ElapsedMilliseconds}");
+            #endregion
         }
     }
 }
