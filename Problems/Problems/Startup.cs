@@ -37,6 +37,15 @@ namespace Problems
             watch.Stop();
             Console.WriteLine($"Ransom String can be constructed from the magazine : {status} and time taken: {watch.ElapsedMilliseconds}");
             #endregion
+
+            #region Day-4
+            Day_4_NumberCompliment day_4 = new Day_4_NumberCompliment();
+            int input=10;
+            watch.Start();
+            int compliment = day_4.FindComplement(input);
+            watch.Stop();
+            Console.WriteLine($"Number Compliment of {input} is {compliment}");
+            #endregion
         }
     }
 }
