@@ -46,6 +46,25 @@ namespace Problems
             watch.Stop();
             Console.WriteLine($"Number Compliment of {input} is {compliment}");
             #endregion
+
+            #region Day-5
+            
+            Day_5_UniqueCharacterInString day_5 = new Day_5_UniqueCharacterInString();
+            string findUniqueCharacter = "slakjfdlskjfdlsk";
+            watch.Start();
+            int uniqueCharacter = day_5.FirstUniqChar(findUniqueCharacter);
+            watch.Stop();
+            Console.WriteLine($"First Unique Character in String is : {uniqueCharacter}");
+            #endregion
+
+            #region Day-6
+            Day_6_MajorityElement day_6 = new Day_6_MajorityElement();
+            int[] nums = new int[] { 2, 2, 1, 1, 1, 2, 2,1,1,1,1,1,1,1,1,1,1,5,5,5,5,5};
+            watch.Start();
+            int majorityElement = day_6.MajorityElement(nums);
+            watch.Stop();
+            Console.WriteLine($"Majority Element is {majorityElement} in time {watch.ElapsedMilliseconds}");
+            #endregion
         }
     }
 }
