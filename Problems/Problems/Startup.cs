@@ -65,6 +65,30 @@ namespace Problems
             watch.Stop();
             Console.WriteLine($"Majority Element is {majorityElement} in time {watch.ElapsedMilliseconds}");
             #endregion
+
+            #region Day-7
+            Day_7_CousinsInBinaryTree tree = new Day_7_CousinsInBinaryTree();
+            tree.root = new TreeNode(1);
+            tree.root.left = new TreeNode(2);
+            tree.root.right = new TreeNode(3);
+            tree.root.left.left = new TreeNode(4);
+            tree.root.left.right = new TreeNode(5);
+            tree.root.left.right.right = new TreeNode(15);
+            tree.root.right.left = new TreeNode(6);
+            tree.root.right.right = new TreeNode(7);
+            tree.root.right.left.right = new TreeNode(8);
+
+            TreeNode Node1, Node2;
+            Node1 = tree.root.left.left;
+            Node2 = tree.root.right.right;
+            watch.Start();
+            if(tree.IsCousins(tree.root,Node1.data,Node2.data))
+                Console.WriteLine($"Status : Yes");
+            else
+                Console.WriteLine("No");
+            watch.Stop();
+            Console.WriteLine($"Executed Binary Tree process in {watch.ElapsedMilliseconds}");
+            #endregion
         }
     }
 }
