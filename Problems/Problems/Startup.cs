@@ -15,7 +15,7 @@ namespace Problems
             Day_1_FirstBadVersion day_1 = new Day_1_FirstBadVersion();
             day_1.firstBadVersion = 1702766719;
             watch.Start();
-            int firstBadVersion =  day_1.FirstBadVersion(2126753390);
+            int firstBadVersion = day_1.FirstBadVersion(2126753390);
             watch.Stop();
             Console.WriteLine($"First Bad Version : {firstBadVersion} and time taken : {watch.ElapsedMilliseconds}");
             #endregion
@@ -33,14 +33,14 @@ namespace Problems
             #region Day-3
             Day_3_RansomNote day_3 = new Day_3_RansomNote();
             watch.Start();
-            bool status = day_3.CanConstruct("aalkjzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzp","aabowureoijlkcvlcvugzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+            bool status = day_3.CanConstruct("aalkjzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzp", "aabowureoijlkcvlcvugzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
             watch.Stop();
             Console.WriteLine($"Ransom String can be constructed from the magazine : {status} and time taken: {watch.ElapsedMilliseconds}");
             #endregion
 
             #region Day-4
             Day_4_NumberCompliment day_4 = new Day_4_NumberCompliment();
-            int input=10;
+            int input = 10;
             watch.Start();
             int compliment = day_4.FindComplement(input);
             watch.Stop();
@@ -48,7 +48,7 @@ namespace Problems
             #endregion
 
             #region Day-5
-            
+
             Day_5_UniqueCharacterInString day_5 = new Day_5_UniqueCharacterInString();
             string findUniqueCharacter = "slakjfdlskjfdlsk";
             watch.Start();
@@ -59,7 +59,7 @@ namespace Problems
 
             #region Day-6
             Day_6_MajorityElement day_6 = new Day_6_MajorityElement();
-            int[] nums = new int[] { 2, 2, 1, 1, 1, 2, 2,1,1,1,1,1,1,1,1,1,1,5,5,5,5,5};
+            int[] nums = new int[] { 2, 2, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 5, 5, 5 };
             watch.Start();
             int majorityElement = day_6.MajorityElement(nums);
             watch.Stop();
@@ -82,12 +82,19 @@ namespace Problems
             Node1 = tree.root.left.left;
             Node2 = tree.root.right.right;
             watch.Start();
-            if(tree.IsCousins(tree.root,Node1.data,Node2.data))
+            if (tree.IsCousins(tree.root, Node1.data, Node2.data))
                 Console.WriteLine($"Status : Yes");
             else
                 Console.WriteLine("No");
             watch.Stop();
             Console.WriteLine($"Executed Binary Tree process in {watch.ElapsedMilliseconds}");
+            #endregion
+
+            #region
+            Day_8_CheckIfAStraightLine day_8 = new Day_8_CheckIfAStraightLine();
+            int[][] coordinates = new int[][] { new int[]{ 1, 2 },new int[] { 2, 3 }, new int[] { 3, 4 }, new int[] { 4, 5 }, new int[] { 5, 6 }, new int[] { 6, 7 } };
+            bool chkStline = day_8.CheckStraightLine(coordinates);
+            Console.WriteLine($"Given coordinates form a straight line ? {chkStline}");
             #endregion
         }
     }
